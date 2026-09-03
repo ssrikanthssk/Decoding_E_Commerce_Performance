@@ -1,4 +1,3 @@
-# utils.py — helper functions for formatting dashboard values
 
 def format_currency(value):
     if value is None:

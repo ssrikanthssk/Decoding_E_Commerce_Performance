@@ -11,6 +11,58 @@ engine = get_engine()
 def run_query(query_func):
     return pd.read_sql(query_func(), con=engine)
 
+st.markdown("""
+<style>
+
+    .stApp {
+        background-color: white;
+        color: white;
+    }
+
+    .stApp p,
+    .stApp label,
+    .stApp span {
+        color: #E2E8F0;
+    }
+
+    h1 {
+        color: #000 !important;
+    }
+
+    h2 {
+        color: #000 !important;
+    }
+
+    h3 {
+        color: #000 !important;
+    }
+
+    section[data-testid="stSidebar"] {
+        background-color: #000;
+    }
+
+    section[data-testid="stSidebar"] * {
+        color: white !important;
+    }
+
+    div[data-testid="stMetric"] {
+        background-color: #1E293B;
+        border: 1px solid #334155;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    div[data-testid="stMetricValue"] {
+        color: #38BDF8 !important;
+    }
+
+    div[data-testid="stMetricLabel"] {
+        color: #CBD5E1 !important;
+    }
+
+</style>
+""", unsafe_allow_html=True)
+
 st.title("🛒 Cart2Insights: Decoding E-Commerce Performance")
 
 section = st.sidebar.radio(
